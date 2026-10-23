@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">lab4</string>
+
+    <string-array name="tipuri_cafea">
+        <item>Espresso</item>
+        <item>Americano</item>
+        <item>Cappuccino</item>
+        <item>Latte</item>
+        <item>Flat White</item>
+    </string-array>
+</resources>
