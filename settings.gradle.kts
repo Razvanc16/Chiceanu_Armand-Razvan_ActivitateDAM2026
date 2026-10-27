@@ -25,4 +25,5 @@ dependencyResolutionManagement {
 rootProject.name = "Chiceanu_Armand-Razvan_ActivitateDAM2026"
 include(":app")
 include(":lab2_3")
-include(":lab4")
+include(":lab4_5")
+

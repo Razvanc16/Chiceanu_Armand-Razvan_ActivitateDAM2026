@@ -10,7 +10,11 @@
         <option name="selectionMode" value="DROPDOWN" />
         <DialogSelection />
       </SelectionState>
-      <SelectionState runConfigName="lab4">
+      <SelectionState runConfigName="lab5">
+        <option name="selectionMode" value="DROPDOWN" />
+        <DialogSelection />
+      </SelectionState>
+      <SelectionState runConfigName="lab4_5">
         <option name="selectionMode" value="DROPDOWN" />
         <DialogSelection />
       </SelectionState>
