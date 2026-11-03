@@ -37,6 +37,39 @@ public class AddActivity extends AppCompatActivity {
                 this, R.array.tipuri_cafea, android.R.layout.simple_spinner_item);
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         spTip.setAdapter(adapter);
+
+        Intent it = getIntent();
+        if (it.hasExtra(MainActivity.KEY_CAFEA)) {
+            Cafea cafea = it.getParcelableExtra(MainActivity.KEY_CAFEA);
+            EditText etDenumire = findViewById(R.id.etDenumire);
+            EditText etPret = findViewById(R.id.etPret);
+            RadioGroup rgMarime = findViewById(R.id.rgMarime);
+            CheckBox cbZahar = findViewById(R.id.cbZahar);
+            Switch swPachet = findViewById(R.id.swPachet);
+            RatingBar rbRating = findViewById(R.id.rbRating);
+
+            etDenumire.setText(cafea.getDenumire());
+            etPret.setText(String.valueOf(cafea.getPret()));
+
+            for (int i = 0; i < spTip.getCount(); i++) {
+                if (spTip.getItemAtPosition(i).toString().equals(cafea.getTip())) {
+                    spTip.setSelection(i);
+                    break;
+                }
+            }
+
+            for (int i = 0; i < rgMarime.getChildCount(); i++) {
+                RadioButton rb = (RadioButton) rgMarime.getChildAt(i);
+                if (rb.getText().toString().equals(cafea.getMarime())) {
+                    rb.setChecked(true);
+                    break;
+                }
+            }
+
+            cbZahar.setChecked(cafea.isCuZahar());
+            swPachet.setChecked(cafea.isLaPachet());
+            rbRating.setRating(cafea.getRating());
+        }
     }
 
     public void salveazaCafea(View view) {
