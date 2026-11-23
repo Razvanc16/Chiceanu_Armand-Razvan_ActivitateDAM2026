@@ -26,4 +26,4 @@ rootProject.name = "Chiceanu_Armand-Razvan_ActivitateDAM2026"
 include(":app")
 include(":lab2_3")
 include(":lab4_5_6")
-
+include(":lab8")
